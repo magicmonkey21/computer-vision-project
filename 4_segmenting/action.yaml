@@ -44,7 +44,7 @@ inputs:
     default: "5"
   invert:
     description: "true = dark pixels are foreground (walls, fluid, drops)"
-    default: "true"
+    default: "false"
 
   # │ morphology
   # │ 🏛️ 1964 · Georges Matheron & Jean Serra, École des Mines de Paris — they
@@ -79,7 +79,7 @@ inputs:
     default: "simple"
   min_contour_area:
     description: "Contours smaller than this (px²) are thrown away — try 150"
-    default: "8"
+    default: "150"
   fill_holes:
     description: "true = fill the inside of closed outlines (the chamber)"
     default: "true"
@@ -100,7 +100,7 @@ inputs:
 
   pass_on:
     description: "masked | mask | crop | original — what Extracting receives"
-    default: "masked"
+    default: "crop"
 
   # ━━━━━━━━━━━━━━━━━━━━━━━ end of this stage's values ━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -48,7 +48,7 @@ inputs:
   # │    milliseconds per frame. Gauss did his sums by hand, for weeks.
   method:
     description: "none | gaussian | median | bilateral | nlmeans — or a list like [median, gaussian]"
-    default: "median"
+    default: "bilateral"
   kernel:
     description: "Odd window size: 3, 5, 7 … bigger = smoother = blurrier"
     default: "3"
@@ -57,7 +57,7 @@ inputs:
     default: "0"
   bilateral_diameter:
     description: "Neighbourhood diameter for the bilateral filter"
-    default: "7"
+    default: "5"
   bilateral_sigma_color:
     description: "How different in brightness a neighbour may be and still count"
     default: "50"

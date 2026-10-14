@@ -24,7 +24,7 @@ inputs:
   # │ chambers; "folder" reads your own images from images_for_training/<class>/.
   source:
     description: "synthetic | folder"
-    default: "synthetic"
+    default: "folder"
   folder:
     description: "Folder with one sub-folder per class (used when source is folder)"
     default: "images_for_training"
@@ -36,7 +36,7 @@ inputs:
   # │    has seen. We lock a test set on day one; every later stage respects it.
   test_size:
     description: "Share of frames locked away as the test set"
-    default: "0.25"
+    default: "0.2"
   seed:
     description: "Random seed — same seed, same split, same results"
     default: "42"
@@ -46,7 +46,7 @@ inputs:
   # │ frame of a video on one side (tools/frames_from_video.py names them so).
   group_by:
     description: "file (every frame on its own) | prefix (cow-pasture_0012.jpg → cow-pasture stays together)"
-    default: "file"
+    default: "prefix"
 
   # │ Rotations by 90° need no maths at all: they are a transpose plus a flip,
   # │ so cv2.rotate only shuffles memory.
